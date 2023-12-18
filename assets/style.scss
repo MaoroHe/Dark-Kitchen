@@ -11,25 +11,38 @@ $fontTitle: 'Dancing Script', cursive;
 $mobile: "475px";
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: beige;
+
+    transition: background-color 0.5s ease;
+
+.dark-mode {
+        background-color: black;
+        color: beige;
+    }
+
+    font-family: Arial,
+    sans-serif;
     margin: 20px;
 
-        & h1 {
+    & h1 {
         font-family: $fontTitle;
         font-size: 300%;
         text-align: center;
     }
-        & h2 { 
-            font-family: $fontTitle;
-            font-size: 100%;
-            text-align: center;
-            color: red;
-        }
+
+    & h2 {
+        font-family: $fontTitle;
+        font-size: 100%;
+        text-align: center;
+        color: rgb(128, 7, 7);
+        margin-bottom: 15px;
+    }
 }
 
 form {
     max-width: 600px;
     margin: auto;
+    margin-top: 15px;
 }
 
 label {
@@ -46,7 +59,7 @@ select {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #747774;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -54,6 +67,47 @@ button {
     cursor: pointer;
 
     &:hover {
-        background-color: #000501;
+        background-color: rgb(97, 27, 27);
     }
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 16px;
+    font-family: $fontTitle;
+    background-color: transparent;
+    opacity: 1;
+}
+
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
 }
