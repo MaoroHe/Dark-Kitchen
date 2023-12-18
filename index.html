@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Maoro's</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,29 +16,36 @@
 </head>
 
 <body>
-    <h1>Maoro's</h1>
-    <h2>Taste swift</h2>
+    <header>
+        <h1>Maoro's</h1>
+        <h2>Taste swift</h2>
+    </header>
 
-    <form id="orderForm" action="/submit_order" method="post" onsubmit="return validateForm()">
-        <label for="customerName">Nom du Client:</label>
-        <input type="text" id="customerName" name="customerName" required>
+    <main>
+        <section class="food"></section>
+    </main>
 
-        <label for="customerAddress">Adresse:</label>
-        <input type="text" id="customerAddress" name="customerAddress" required>
+    <footer>
+        <form id="orderForm" action="/submit_order" method="post" onsubmit="return validateForm()">
+            <label for="customerName">Nom du Client:</label>
+            <input type="text" id="customerName" name="customerName" required>
 
-        <label for="items">Articles à Commander:</label>
-        <textarea id="items" name="items" rows="4" required></textarea>
+            <label for="customerAddress">Adresse:</label>
+            <input type="text" id="customerAddress" name="customerAddress" required>
 
-        <label for="paymentMethod">Méthode de Paiement:</label>
-        <select id="paymentMethod" name="paymentMethod" required>
-            <option value="creditCard">Carte de Crédit</option>
-            <option value="paypal">PayPal</option>
-            <option value="cash">Espèces à la Livraison</option>
-        </select>
+            <label for="items">Articles à Commander:</label>
+            <textarea id="items" name="items" rows="4" required></textarea>
 
-        <button type="submit">Passer la Commande</button>
-    </form>
+            <label for="paymentMethod">Méthode de Paiement:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="creditCard">Carte de Crédit</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash">Espèces à la Livraison</option>
+            </select>
 
+            <button type="submit">Passer la Commande</button>
+        </form>
+    </footer>
 </body>
 
 </html>
