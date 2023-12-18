@@ -1,4 +1,4 @@
-@import 'scss/reset';
+@import 'scss/reset', 'scss/card';
 
 @mixin media($screen) {
     @media(max-width:$screen) {
@@ -12,7 +12,6 @@ $mobile: "475px";
 
 body {
     background-color: beige;
-
     transition: background-color 0.5s ease;
 
 .dark-mode {
