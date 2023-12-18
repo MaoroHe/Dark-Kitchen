@@ -1,4 +1,4 @@
-@import 'reset';
+@import 'scss/reset';
 
 @mixin media($screen) {
     @media(max-width:$screen) {
