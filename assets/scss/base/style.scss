@@ -1,6 +1,6 @@
 @import "../reset/reset";
 @import "../card/card";
-@import "../nav/nav.scss";
+@import "../nav/nav";
 
 @mixin media($screen) {
     @media(max-width:$screen) {
@@ -14,12 +14,8 @@ $mobile: "475px";
 
 body {
     background-color: rgb(255, 255, 255);
+    margin: 0;
     transition: background-color 200ms linear;
-
-    .dark-mode {
-        background-color: rgb(46, 45, 45);
-        color: beige;
-    }
 
     font-family: Arial,
     sans-serif;
@@ -79,7 +75,7 @@ button {
     position: relative;
     margin: auto;
     width: 100%;
-
+    overflow: hidden;
 }
 
 .carousel {
@@ -90,6 +86,7 @@ button {
 }
 
 .item {
+    margin-top: 100px;
     cursor: pointer;
     max-width: 400px;
     width: 20%;
