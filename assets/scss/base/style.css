@@ -33,7 +33,7 @@ time, mark, audio, video {
   height: 340px;
   margin-bottom: 20px;
   flex-wrap: wrap;
-  transition: all 210ms linear;
+  transition: all 180ms linear;
   border-radius: 25px;
   vertical-align: text-top;
   align-items: flex-start;
@@ -115,6 +115,7 @@ time, mark, audio, video {
   color: black;
   transition: all 125ms linear;
   position: relative;
+  margin-bottom: 10px;
 }
 .food__card__cart:hover {
   background-color: #88AB8E;
@@ -130,6 +131,22 @@ time, mark, audio, video {
 }
 .dark-mode .item {
   border-color: transparent;
+}
+.dark-mode .prev-button {
+  background-color: #393E46;
+  margin-left: 35px;
+  transition: all 200ms linear;
+}
+.dark-mode .prev-button:hover {
+  background-color: #9ca3ad;
+}
+.dark-mode .next-button {
+  background-color: #393E46;
+  margin-right: 32px;
+  transition: all 200ms linear;
+}
+.dark-mode .next-button:hover {
+  background-color: #9ca3ad;
 }
 .dark-mode .food__card {
   background-color: #393E46;
