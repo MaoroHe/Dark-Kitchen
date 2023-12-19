@@ -1,6 +1,5 @@
 @import "../reset/reset";
-@import "../card/card";
-@import "../nav/nav";
+@import "../darkmode/darkmod";
 
 @mixin media($screen) {
     @media(max-width:$screen) {
@@ -136,3 +135,6 @@ button {
     right: 10px;
     margin-right: 32px;
 }
+
+@import "../card/card";
+@import "../nav/nav";

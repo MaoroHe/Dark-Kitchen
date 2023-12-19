@@ -1,0 +1,78 @@
+// darkmode
+
+.dark-mode {
+    background-color: #222831;
+    color: white;
+
+    .nav {
+        background-color: #181c22;
+        & h2 {
+            color: #ff0000;
+        }
+
+        .darkModeToggle {
+            .dark {
+                display:inline;
+                filter: invert(100%);
+            }
+            .light {
+                display: none;
+            }
+        }
+
+        .fooda {
+            .carousel-container {
+                .carousel {
+                    .text {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .item {
+        border-color: transparent;
+    }
+
+    .prev-button {
+        background-color: #393E46;
+        margin-left: 35px;
+        color: white;
+        transition: all 200ms linear;
+        &:hover {
+            background-color: #9ca3ad;
+        }
+    }
+    .next-button {
+        background-color: #393E46;
+        margin-right: 32px;
+        transition: all 200ms linear;
+        color: white;
+        &:hover {
+            background-color: #9ca3ad;
+        }
+    }
+
+    .food {
+        &__card {
+            background-color: #393E46;
+
+            &:hover {
+                box-shadow: rgba(255, 255, 255, 0.5) 0px 3px 8px;
+            }
+
+            &__ing {
+                &__ingredient {
+                    background-color: #9ca3af;
+                    color: #222831;
+
+                    &:hover {
+                        background-color: #FF7F7F;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
