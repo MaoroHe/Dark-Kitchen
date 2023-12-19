@@ -36,7 +36,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
-}
+   }
 
 .popup-exit{
     position: absolute;
@@ -47,4 +47,12 @@
     background-color: black;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.popup-content h3{
+    font-family: $fontTitle;
+        font-size: 100%;
+        text-align: center;
+        color: rgb(128, 7, 7);
+        margin-bottom: 15px;
 }

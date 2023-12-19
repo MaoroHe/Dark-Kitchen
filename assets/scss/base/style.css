@@ -55,6 +55,7 @@ table {
 body {
   background-color: rgb(255, 255, 255);
   transition: background-color 0.5s ease;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   margin: 20px;
 }
@@ -297,4 +298,12 @@ button:hover {
   background-color: black;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.popup-content h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 100%;
+  text-align: center;
+  color: rgb(128, 7, 7);
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
