@@ -13,7 +13,7 @@ $mobile: "475px";
 
 body {
     background-color: rgb(255, 255, 255);
-    transition: background-color 0.5s ease;
+    transition: background-color 200ms linear;
 
     .dark-mode {
         background-color: rgb(46, 45, 45);
