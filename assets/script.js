@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -6,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.toggle('dark-mode');
     });
 });
+
+
 
 
 const menu = [

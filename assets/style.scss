@@ -11,12 +11,12 @@ $fontTitle: 'Dancing Script', cursive;
 $mobile: "475px";
 
 body {
-    background-color: beige;
+    background-color: rgb(255, 255, 255);
 
     transition: background-color 0.5s ease;
 
-.dark-mode {
-        background-color: black;
+        .dark-mode {
+        background-color: rgb(46, 45, 45);
         color: beige;
     }
 
@@ -65,6 +65,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: $fontTitle;
 
     &:hover {
         background-color: rgb(97, 27, 27);
@@ -88,7 +89,11 @@ button {
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #380b0b;
+        .item img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .prev-button,
