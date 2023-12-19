@@ -6,7 +6,10 @@
     justify-content: space-between;
     margin-top: 200px;
     margin-bottom: 150px;
-    
+        @include media($mobile) {
+            justify-content: center;
+        }
+
     &__card {
         display: flex;
         width: 18rem;
@@ -19,10 +22,15 @@
         align-items: flex-start;
         align-content: start;
         background-color: white;
+        
+
+
+      
 
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
+
         &__image {
             object-fit: cover;
             width: 100%;
@@ -30,6 +38,7 @@
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;
         }
+
         &__title {
             width: 100%;
             text-align: start;
@@ -40,6 +49,7 @@
             height: fit-content;
             margin-top: 5px;
         }
+
         &__price {
             width: 100%;
             text-align: start;
@@ -49,11 +59,13 @@
             height: fit-content;
             margin-top: 3px;
         }
+
         &__ing {
             display: flex;
             width: 100%;
             height: 30px;
             flex-wrap: wrap;
+
             &__ingredient {
                 display: flex;
                 align-items: center;
@@ -70,13 +82,14 @@
                 border-radius: 15px;
                 cursor: pointer;
                 transition: all 100ms linear;
-    
+
                 &:hover {
                     background-color: #FF7F7F;
                     color: white;
                 }
             }
         }
+
         &__cart {
             display: flex;
             justify-self: center;
@@ -93,7 +106,7 @@
             transition: all 125ms linear;
             position: relative;
             margin-bottom: 10px;
-
+            
             &:hover {
                 background-color: #88AB8E;
                 color: white;
@@ -111,6 +124,7 @@
     & h2 {
         color: #ff0000;
     }
+
     .fooda {
         .carousel-container {
             .carousel {
@@ -120,6 +134,7 @@
             }
         }
     }
+
     .item {
         border-color: transparent;
     }
@@ -129,15 +144,18 @@
         margin-left: 35px;
         color: white;
         transition: all 200ms linear;
+
         &:hover {
             background-color: #9ca3ad;
         }
     }
+
     .next-button {
         background-color: #393E46;
         margin-right: 32px;
         transition: all 200ms linear;
         color: white;
+
         &:hover {
             background-color: #9ca3ad;
         }

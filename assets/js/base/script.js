@@ -1,16 +1,4 @@
-/*
-function validateForm() {
-    let customerName = document.getElementById('customerName').value;
-    let customerAddress = document.getElementById('customerAddress').value;
-    let items = document.getElementById('items').value;
 
-    if (customerName === "" || customerAddress === "" || items === "") {
-        alert("Veuillez remplir tous les champs du formulaire.");
-        return false;
-    }
-
-    return true;
-}*/
 
 //
 
