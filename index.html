@@ -9,13 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/scss/base/style.css">
+
     <script src="assets/js/base/script.js" defer></script>
     <script src="assets/js/card/card.js" defer></script>
     <script src="assets/js/darkmod/darkmod.js" defer></script>
+    <script src="assets/js/shopping_cart/shopping_cart.js" defer></script>
 </head>
 
 <body>
     <button id="darkModeToggle">Dark Mode</button>
+
+    <!-- SHOPPING CART -->
+    <button onclick="togglePopup()">Panier</button>
+
+    <div id="popup-overlay">
+        <div class="popup-content">
+            <h2>Ceci est un POPUP !</h2>
+            <p>Salut et bienvenue dans le panier !</p>
+            <a href="/" class="popup-link">Commandez</a>
+            <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
+        </div>
+    </div>
+    <!-- /SHOPPING CART -->
+
     <header>
         <h1>Maoro's</h1>
         <h2>Taste swift</h2>
@@ -25,21 +41,22 @@
         <section class="fooda">
             <div class="carousel-container">
                 <div class="carousel">
-                  <div class="item"><img src="assets/img/margherita-pizza.jpg" title="margherita"  alt="margherita"></div>
-                  <div class="item">Item 2</div>
-                  <div class="item">Item 3</div>
-                  <div class="item">Item 4</div>
-                  <div class="item">Item 5</div>
-                  <div class="item">Item 6</div>
-                  <div class="item">Item 7</div>
-                  <div class="item">Item 8</div>
-                  <div class="item">Item 9</div>
+                    <div class="item"><img src="assets/img/margherita-pizza.jpg" title="margherita" alt="margherita">
+                    </div>
+                    <div class="item">Item 2</div>
+                    <div class="item">Item 3</div>
+                    <div class="item">Item 4</div>
+                    <div class="item">Item 5</div>
+                    <div class="item">Item 6</div>
+                    <div class="item">Item 7</div>
+                    <div class="item">Item 8</div>
+                    <div class="item">Item 9</div>
                 </div>
                 <button class="prev-button" onclick="prevSlide()">Précédent</button>
                 <button class="next-button" onclick="nextSlide()">Suivant</button>
-              </div>
+            </div>
         </section>
-        
+
         <section class="food"></section>
     </main>
 
