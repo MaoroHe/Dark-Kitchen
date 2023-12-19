@@ -1,4 +1,4 @@
-@import 'scss/reset', 'scss/card';
+@import 'scss/reset/reset', 'scss/card/card';
 
 @mixin media($screen) {
     @media(max-width:$screen) {
