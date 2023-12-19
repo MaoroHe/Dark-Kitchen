@@ -102,6 +102,7 @@
     }
 }
 
+// darkmode
 
 .dark-mode {
     background-color: #222831;
@@ -110,6 +111,15 @@
     & h2 {
         color: #ff0000;
     }
+    .fooda {
+        .carousel-container {
+            .carousel {
+                .text {
+                    color: white;
+                }
+            }
+        }
+    }
     .item {
         border-color: transparent;
     }
@@ -117,6 +127,7 @@
     .prev-button {
         background-color: #393E46;
         margin-left: 35px;
+        color: white;
         transition: all 200ms linear;
         &:hover {
             background-color: #9ca3ad;
@@ -126,6 +137,7 @@
         background-color: #393E46;
         margin-right: 32px;
         transition: all 200ms linear;
+        color: white;
         &:hover {
             background-color: #9ca3ad;
         }
