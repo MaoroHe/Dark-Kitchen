@@ -1,0 +1,33 @@
+main {
+    display: flex;
+    flex-direction: column;
+    transition: 120ms linear;
+}
+
+.panier {
+    
+}
+
+
+.carton {
+    align-self: center;
+    justify-self: center;
+    margin-top: 140px;
+    width: 55%;
+    height: 560px;
+    border-radius: 50px;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
+    filter: opacity(85%);
+    transition: all 180ms linear;
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+
+    & .close {
+        position: absolute;
+        right: 0;
+        margin-right: 3%;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
