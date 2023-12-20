@@ -92,10 +92,6 @@ main {
   transition: 120ms linear;
 }
 
-.panier {
-  display: none;
-}
-
 .carton {
   align-self: center;
   justify-self: center;
