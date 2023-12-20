@@ -20,89 +20,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  transition: 120ms linear;
-}
-
-.panier {
-  display: none;
-  color: transparent;
-  transition: all 180ms linear;
-}
-
-.carton {
-  display: flex;
-  color: black;
-  height: -moz-fit-content;
-  height: fit-content;
-  align-self: center;
-  justify-content: flex-start;
-  justify-self: center;
-  margin-top: 140px;
-  width: 55%;
-  height: 560px;
-  border-radius: 50px;
-  position: fixed;
-  z-index: 3;
-  background-color: white;
-  filter: opacity(85%);
-  transition: all 180ms linear;
-  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-  flex-wrap: wrap;
-}
-.carton .close {
-  position: absolute;
-  right: 0;
-  margin-right: 3%;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: all 120ms linear;
-}
-.carton .close:hover {
-  animation-name: tourner;
-  animation-iteration-count: infinite;
-  animation-duration: 1600ms;
-  animation-timing-function: linear;
-  filter: brightness(0) saturate(100%) invert(26%) sepia(96%) saturate(3677%) hue-rotate(346deg) brightness(100%) contrast(98%);
-}
-@keyframes tourner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.carton .title {
-  font-size: 56px;
-  margin-top: 20px;
-  width: 100%;
-  top: 0%;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-bottom: 0%;
-}
-.carton .item {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  height: 300px;
-  position: relative;
-  margin-top: 0%;
-  list-style: none;
-  overflow-y: hidden;
-  margin-left: 5%;
-}
-.carton li {
-  font-size: 18px;
-  margin-left: 0;
-  width: -moz-fit-content;
-  width: fit-content;
-  justify-self: left;
-}
-
 body {
   background-color: rgb(255, 255, 255);
   margin: 0;
@@ -220,11 +137,94 @@ button:hover {
   margin-right: 32px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  transition: 120ms linear;
+}
+
+.panier {
+  display: none;
+  color: transparent;
+  transition: all 180ms linear;
+}
+
+.carton {
+  display: flex;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+  justify-content: flex-start;
+  justify-self: center;
+  margin-top: 140px;
+  width: 55%;
+  height: 560px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+  filter: opacity(85%);
+  transition: all 180ms linear;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  flex-wrap: wrap;
+}
+.carton .close {
+  position: absolute;
+  right: 0;
+  margin-right: 3%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 120ms linear;
+}
+.carton .close:hover {
+  animation-name: tourner;
+  animation-iteration-count: infinite;
+  animation-duration: 1600ms;
+  animation-timing-function: linear;
+  filter: brightness(0) saturate(100%) invert(26%) sepia(96%) saturate(3677%) hue-rotate(346deg) brightness(100%) contrast(98%);
+}
+@keyframes tourner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.carton .title {
+  font-size: 56px;
+  margin-top: 20px;
+  width: 100%;
+  top: 0%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 0%;
+}
+.carton .item {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  height: 300px;
+  position: relative;
+  margin-top: 0%;
+  list-style: none;
+  overflow-y: hidden;
+  margin-left: 5%;
+}
+.carton li {
+  font-size: 18px;
+  margin-left: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: left;
+}
+
 .food {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 200px;
+  margin-top: 80px;
   margin-bottom: 150px;
 }
 @media (max-width: 620px) {
@@ -332,6 +332,10 @@ button:hover {
 .food__card__cart:hover {
   background-color: #88AB8E;
   color: white;
+}
+
+.Sbutton {
+  margin-top: 80px;
 }
 
 .nav {

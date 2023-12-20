@@ -1,5 +1,4 @@
 @import "../reset/reset";
-@import "../shopping-cart/shopping-cart";
 
 @mixin media($screen) {
     @media(max-width:$screen) {
@@ -34,7 +33,6 @@ body {
     }
 }
 
-
 button {
     background-color: #747774;
     color: white;
@@ -55,10 +53,6 @@ button {
     position: relative;
     margin: auto;
     width: 100%;
-
-
-
-
     overflow: hidden;
 
     .carousel {
@@ -129,6 +123,7 @@ button {
             background-color: rgb(97, 27, 27);
             color: white;
         }
+        
         @include media($mobile) {
             margin-left: 10px;
             margin-right: 10px;
@@ -148,6 +143,9 @@ button {
     margin-right: 32px;
 }
 
+//
+
+@import "../shopping-cart/shopping-cart";
 @import "../card/card";
 @import "../nav/nav";
 @import "../darkmode/darkmod";

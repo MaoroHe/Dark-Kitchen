@@ -64,56 +64,65 @@ const menu = [
     },
 ];
 
-function cardCreator() {
-    for(let item of menu) {
-        let pizzaName = item.name;
-        let picture = item.picture;
-        let price = item.prix;
+function filterCards(category  = 'Tous') {
+    const sectionA = document.querySelector('section.food');
+    sectionA.innerHTML = ''; // Effacez le contenu actuel de la section
 
-        const sectionA = document.querySelector('section.food');
-        let divCreatorA = document.createElement('div');
-        let img = document.createElement('img');
-        let titleCreator = document.createElement('h1');
-        let priceCreator = document.createElement('h2');
+    for (let item of menu) {
+        if (category === 'Tous' || item.categorie === category) {
+            let pizzaName = item.name;
+            let picture = item.picture;
+            let price = item.prix;
 
-        let titleInjector = document.createTextNode(pizzaName);
-        let priceInjector = document.createTextNode(price);
+            let divCreatorA = document.createElement('div');
+            let img = document.createElement('img');
+            let titleCreator = document.createElement('h1');
+            let priceCreator = document.createElement('h2');
+            let divCreatorB = document.createElement('div');
+            let cartButton = document.createElement('button');
+            let cartText = document.createTextNode('Add to cart');
 
+            divCreatorA.className = `food__card ${pizzaName}`;
 
-        sectionA.appendChild(divCreatorA);
-        divCreatorA.className = `food__card ${pizzaName}`;
+            img.src = `${picture}`;
+            img.className = `food__card__image`;
 
-        divCreatorA.appendChild(img);
-        img.src = `${picture}`;
-        img.className = `food__card__image`;
+            titleCreator.className = 'food__card__title';
+            titleCreator.appendChild(document.createTextNode(pizzaName));
 
-        divCreatorA.appendChild(titleCreator);
-        titleCreator.className = 'food__card__title';
-        titleCreator.appendChild(titleInjector);
+            priceCreator.className = 'food__card__price';
+            priceCreator.appendChild(document.createTextNode(price));
 
-        divCreatorA.appendChild(priceCreator);
-        priceCreator.className = 'food__card__price';
-        priceCreator.appendChild(priceInjector);
+            divCreatorB.className = 'food__card__ing';
 
-        let divCreatorB = document.createElement('div');
-        divCreatorA.appendChild(divCreatorB);
-        divCreatorB.className = 'food__card__ing'
+            for (let element of item.ingredient) {
+                let pCreatorA = document.createElement('p');
+                pCreatorA.className = 'food__card__ing__ingredient';
+                pCreatorA.appendChild(document.createTextNode(element));
+                divCreatorB.appendChild(pCreatorA);
+            }
 
-        for(let element of item.ingredient) {
-            let pCreatorA = document.createElement('p');
-            let ingredientInjector = document.createTextNode(element);
+            cartButton.appendChild(cartText);
+            cartButton.className = `food__card__cart paye ${pizzaName}`;
 
-            divCreatorB.appendChild(pCreatorA);
-            pCreatorA.className = 'food__card__ing__ingredient';
-            pCreatorA.appendChild(ingredientInjector);
-        };
+            divCreatorA.appendChild(img);
+            divCreatorA.appendChild(titleCreator);
+            divCreatorA.appendChild(priceCreator);
+            divCreatorA.appendChild(divCreatorB);
+            divCreatorA.appendChild(cartButton);
 
-        let cartButton = document.createElement('button');
-        let cartText = document.createTextNode('Add to cart');
+            sectionA.appendChild(divCreatorA);
+        }
+    }
+}
 
-        divCreatorA.appendChild(cartButton);
-        cartButton.appendChild(cartText)
-        cartButton.className = `food__card__cart paye ${pizzaName}`;
-    };
-};
-cardCreator();
+function initializePage() {
+    filterCards('Tous');
+}
+
+// Cette ligne assure que la fonction initializePage sera appelée lorsque la page est complètement chargée.
+function load() {
+window.onload = initializePage();
+}
+
+load()

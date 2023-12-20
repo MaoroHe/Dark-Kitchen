@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 200px;
+    margin-top: 80px;
     margin-bottom: 150px;
     @include media($mobile) {
         justify-content: center;
@@ -27,7 +27,6 @@
             width: 23rem;
             height: 400px;
         }
-
 
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -108,11 +107,15 @@
             transition: all 125ms linear;
             position: relative;
             margin-bottom: 10px;
-            
+
             &:hover {
                 background-color: #88AB8E;
                 color: white;
             }
         }
     }
+}
+
+.Sbutton {
+    margin-top: 80px;
 }

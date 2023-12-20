@@ -63,7 +63,7 @@ main {
         top: 0%;
         height: fit-content;
         margin-bottom: 0%;
-    };
+    }
 
     & .item {
         display: flex;
@@ -75,12 +75,12 @@ main {
         list-style: none;
         overflow-y: hidden;
         margin-left: 5%;
-    };
+    }
 
     & li {
         font-size: 18px;
         margin-left: 0;
         width: fit-content;
         justify-self: left;
-    };
+    }
 }
