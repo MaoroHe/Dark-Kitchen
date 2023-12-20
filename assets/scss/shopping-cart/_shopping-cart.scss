@@ -39,14 +39,29 @@ main {
     }
 
     & .title {
+        font-size: 56px;
         margin-top: 20px;
         width: 100%;
         top: 0%;
         height: fit-content;
+        margin-bottom: 0%;
     }
 
     & .item {
-        width: 100%;
-        height: fit-content;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        height: 300px;
+        position: relative;
+        margin-top: 0%;
+        list-style: none;
+        overflow-y: hidden;
+    }
+
+    & li {
+        font-size: 18px;
+        margin-left: 4.5%;
+        width: fit-content;
+        justify-self: left;
     }
 }

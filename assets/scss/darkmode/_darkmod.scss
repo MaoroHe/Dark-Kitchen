@@ -10,6 +10,14 @@
         & .close {
             filter: invert(100%);
         }
+
+        & .title {
+            color: white;
+        }
+
+        & .item {
+            color: white;
+        }
     }
 
     .nav {
