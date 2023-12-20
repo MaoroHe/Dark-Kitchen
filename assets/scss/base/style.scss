@@ -119,7 +119,18 @@ button {
 
 
 @import "../card/card";
-@import "../shopping_cart/shopping_cart.scss"
+@import "../shopping_cart/shopping_cart.scss";
 
 
+
+// tri
+
+.Sbutton{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+
+    padding-top: 100px;
+    padding-bottom: -200px;
+}
 

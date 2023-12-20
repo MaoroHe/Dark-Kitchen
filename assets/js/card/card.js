@@ -117,3 +117,36 @@ function cardCreator() {
     };
 };
 cardCreator();
+
+
+const buttonAll = document.getElementById("Ball");
+const buttonTomates = document.getElementById("Btomates");
+const buttonCreme = document.getElementById("Bcreme");
+
+function showAllCards() {
+    main.innerHTML = ""; // Efface le contenu actuel de main
+
+    menu.forEach((item) => {
+        const card = createCard(item);
+        main.appendChild(card);
+    });
+}
+
+function showCardsByDivision(categorie) {
+    main.innerHTML = ""; // Efface le contenu actuel de main
+
+    const filteredItem = menu.filter(item => item.categorie === categorie);
+
+    filteredItem.forEach((item) => {
+        const card = createCard(item);
+        main.appendChild(card);
+    });
+}
+
+Ball.addEventListener("click", showAllCards);
+Btomates.addEventListener("click", () => showCardsByDivision("Tomate"));
+Bcreme.addEventListener("click", () => showCardsByDivision("Blanche"));
+
+
+document.addEventListener("DOMContentLoaded", showAllCards); //afficher toutes les card quand j'ouvre la page
+
