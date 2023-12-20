@@ -3,11 +3,23 @@
 .dark-mode {
     background-color: #222831;
     color: white;
+    .carton {
+        background-color: #181c22;
+        filter: opacity(85%);
+    
+        & .close {
+            filter: invert(100%);
+        }
+    }
 
     .nav {
         background-color: #181c22;
         & h2 {
             color: #ff0000;
+        }
+
+        &__cart {
+            filter: invert(100%);
         }
 
         .darkModeToggle {

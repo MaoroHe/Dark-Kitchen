@@ -24,11 +24,21 @@ time, mark, audio, video {
   background-color: #222831;
   color: white;
 }
+.dark-mode .carton {
+  background-color: #181c22;
+  filter: opacity(85%);
+}
+.dark-mode .carton .close {
+  filter: invert(100%);
+}
 .dark-mode .nav {
   background-color: #181c22;
 }
 .dark-mode .nav h2 {
   color: #ff0000;
+}
+.dark-mode .nav__cart {
+  filter: invert(100%);
 }
 .dark-mode .nav .darkModeToggle .dark {
   display: inline;
@@ -76,10 +86,42 @@ time, mark, audio, video {
   color: white;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  transition: 120ms linear;
+}
+
+.panier {
+  display: none;
+}
+
+.carton {
+  align-self: center;
+  justify-self: center;
+  margin-top: 140px;
+  width: 55%;
+  height: 560px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+  filter: opacity(85%);
+  transition: all 180ms linear;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+.carton .close {
+  position: absolute;
+  right: 0;
+  margin-right: 3%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   margin: 0;
-  transition: background-color 200ms linear;
+  transition: all 180ms linear;
   font-family: Arial, sans-serif;
   margin: 20px;
 }
@@ -316,6 +358,25 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding-bottom: 10px;
   transition: all 200ms linear;
+}
+.nav__cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  margin-right: 85px;
+  margin-top: 5px;
+  background-color: transparent;
+}
+.nav__cart:hover {
+  background-color: transparent;
+}
+.nav__cart .cart {
+  width: 60px;
+  height: 60px;
 }
 .nav .darkModeToggle {
   width: 60px;
