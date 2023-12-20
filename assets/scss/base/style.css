@@ -26,6 +26,9 @@ time, mark, audio, video {
   justify-content: space-between;
   margin-top: 200px;
   margin-bottom: 150px;
+  /*   @include media($mobile) {
+         justify-content: center;
+     }*/
 }
 .food__card {
   display: flex;
@@ -272,12 +275,20 @@ button:hover {
   opacity: 1;
   margin-left: 35px;
   margin-right: 32px;
+  transition: all 150ms linear;
 }
-.carousel-container .prev-button {
+.carousel-container .prev-button:hover,
+.carousel-container .next-button:hover {
+  background-color: rgb(97, 27, 27);
+  color: white;
+}
+
+.prev-button {
   left: 10px;
   margin-left: 35px;
 }
-.carousel-container .next-button {
+
+.next-button {
   right: 10px;
   margin-right: 32px;
 }/*# sourceMappingURL=style.css.map */

@@ -6,9 +6,9 @@
     justify-content: space-between;
     margin-top: 200px;
     margin-bottom: 150px;
-        @include media($mobile) {
+     /*   @include media($mobile) {
             justify-content: center;
-        }
+        }*/
 
     &__card {
         display: flex;
