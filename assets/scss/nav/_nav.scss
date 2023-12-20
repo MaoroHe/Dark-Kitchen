@@ -24,6 +24,10 @@
         margin-right: 85px;
         margin-top: 5px;
         background-color: transparent;
+        @include media($mobile) {
+            left: 0;
+            margin-left: 25px;
+        }
 
         &:hover {
             background-color: transparent;

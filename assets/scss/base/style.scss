@@ -1,5 +1,4 @@
 @import "../reset/reset";
-@import "../darkmode/darkmod";
 @import "../shopping-cart/shopping-cart";
 
 @mixin media($screen) {
@@ -10,15 +9,14 @@
 
 $fontTitle: 'Dancing Script', cursive;
 
-$mobile: "475px";
+$mobile: "620px";
+
 
 body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     transition: all 180ms linear;
-
-    font-family: Arial,
-        sans-serif;
+    font-family: Arial, sans-serif;
     margin: 20px;
 
     & h1 {
@@ -68,6 +66,10 @@ button {
         display: flex;
         width: 100%;
         transition: transform 0.5s ease-in-out;
+
+            @include media($mobile) {
+            margin-top: 1px;
+        }
     }
 
     .item {
@@ -127,6 +129,11 @@ button {
             background-color: rgb(97, 27, 27);
             color: white;
         }
+        @include media($mobile) {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 50px;
+        }
     }
 }
 
@@ -143,4 +150,4 @@ button {
 
 @import "../card/card";
 @import "../nav/nav";
-
+@import "../darkmode/darkmod";
