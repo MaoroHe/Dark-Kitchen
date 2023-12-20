@@ -5,12 +5,18 @@ main {
 }
 
 .panier {
-    
+    display: none;
+    color: transparent;
+    transition: all 180ms linear;
 }
 
 
 .carton {
+    display: flex;
+    color: black;
+    height: fit-content;
     align-self: center;
+    justify-content: center;
     justify-self: center;
     margin-top: 140px;
     width: 55%;
@@ -22,6 +28,7 @@ main {
     filter: opacity(85%);
     transition: all 180ms linear;
     box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    flex-wrap: wrap;
 
     & .close {
         position: absolute;
@@ -29,5 +36,17 @@ main {
         margin-right: 3%;
         margin-top: 20px;
         cursor: pointer;
+    }
+
+    & .title {
+        margin-top: 20px;
+        width: 100%;
+        top: 0%;
+        height: fit-content;
+    }
+
+    & .item {
+        width: 100%;
+        height: fit-content;
     }
 }

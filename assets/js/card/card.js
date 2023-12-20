@@ -21,7 +21,7 @@ const menu = [
         categorie: 'Tomate',
     },
     {
-        name: "Quattro Formaggi",
+        name: "Quattro-Formaggi",
         prix: "14€50",
         ingredient: ["Sauce tomate", "Fleur de lait", "Gorgonzola", "Parmesan", "Taleggio"],
         picture: "assets/img/fromages.jpg",
@@ -113,7 +113,7 @@ function cardCreator() {
 
         divCreatorA.appendChild(cartButton);
         cartButton.appendChild(cartText)
-        cartButton.className = 'food__card__cart';
+        cartButton.className = `food__card__cart paye ${pizzaName}`;
     };
 };
 cardCreator();
