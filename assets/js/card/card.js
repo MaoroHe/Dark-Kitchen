@@ -1,63 +1,63 @@
 const menu = [
     {
         name: "Margherita",
-        prix: "12.00",
+        prix: "12€",
         ingredient: ["Sauce tomate", "Fleur de lait", "Basilic"],
         picture: "assets/img/margherita-pizza.jpg",
         categorie: 'Tomate',
     },
     {
         name: "Prosciutto",
-        prix: "13.00",
+        prix: "13€",
         ingredient: ["Sauce tomate", "Fleur de lait", "Jambon"],
         picture: "assets/img/prosciutto.jpg",
         categorie: 'Tomate',
     },
     {
         name: "Napoli",
-        prix: "14.00",
+        prix: "14€",
         ingredient: ["Sauce tomate", "Fleur de lait", "Anchois", "Câpres", "Olives noires"],
         picture: "assets/img/napoli.jpg",
         categorie: 'Tomate',
     },
     {
-        name: "Quattro Formaggi",
-        prix: "14.50",
+        name: "Quattro-Formaggi",
+        prix: "14€50",
         ingredient: ["Sauce tomate", "Fleur de lait", "Gorgonzola", "Parmesan", "Taleggio"],
         picture: "assets/img/fromages.jpg",
         categorie: 'Tomate',
     },
     {
         name: "Calzone",
-        prix: "14.50",
+        prix: "14€50",
         ingredient: ["Sauce tomate", "Fleur de lait", "Jambon", "Champignons", "Oignons", "Oeuf", "Olives noires"],
         picture: "assets/img/calzone.jpg",
         categorie: 'Tomate',
     },
     {
         name: "Parmiggiana",
-        prix: "15.00",
+        prix: "15€",
         ingredient: ["Sauce tomate", "Fleur de lait", "Parmesan", "Aubergines", "Roquette"],
         picture: "assets/img/parmigiana.jpg",
         categorie: 'Tomate',
     },
     {
         name: "Caprese",
-        prix: "15.50",
+        prix: "15€50",
         ingredient: ["Fleur de lait", "Bufala", "Parmesan", "Tomates Fraîches", "Roquette"],
         picture: "assets/img/caprese.jpg",
         categorie: 'Blanche',
     },
     {
         name: "Pèpè",
-        prix: "17.50",
+        prix: "17€50",
         ingredient: ["Pesto", "Fleur de lait", "Burrata", "Tomates Semi-Séchée"],
         picture: "assets/img/pepe.jpg",
         categorie: 'Blanche',
     },
     {
         name: "Trinachia",
-        prix: "17.00",
+        prix: "17€",
         ingredient: ["Fleur de lait", "Jambon de parme", "Roquette", "Copeaux de parmesan", "Crème balsamique"],
         picture: "assets/img/trinachia.jpg",
         categorie: 'Blanche',
@@ -113,40 +113,7 @@ function cardCreator() {
 
         divCreatorA.appendChild(cartButton);
         cartButton.appendChild(cartText)
-        cartButton.className = 'food__card__cart';
+        cartButton.className = `food__card__cart paye ${pizzaName}`;
     };
 };
 cardCreator();
-
-
-const buttonAll = document.getElementById("Ball");
-const buttonTomates = document.getElementById("Btomates");
-const buttonCreme = document.getElementById("Bcreme");
-
-function showAllCards() {
-    main.innerHTML = ""; // Efface le contenu actuel de main
-
-    menu.forEach((item) => {
-        const card = createCard(item);
-        main.appendChild(card);
-    });
-}
-
-function showCardsByDivision(categorie) {
-    main.innerHTML = ""; // Efface le contenu actuel de main
-
-    const filteredItem = menu.filter(item => item.categorie === categorie);
-
-    filteredItem.forEach((item) => {
-        const card = createCard(item);
-        main.appendChild(card);
-    });
-}
-
-Ball.addEventListener("click", showAllCards);
-Btomates.addEventListener("click", () => showCardsByDivision("Tomate"));
-Bcreme.addEventListener("click", () => showCardsByDivision("Blanche"));
-
-
-document.addEventListener("DOMContentLoaded", showAllCards); //afficher toutes les card quand j'ouvre la page
-

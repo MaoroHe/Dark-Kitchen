@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,45 +20,130 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+.dark-mode {
+  background-color: #222831;
+  color: white;
+}
+.dark-mode .carton {
+  background-color: #181c22;
+  filter: opacity(85%);
+}
+.dark-mode .carton .close {
+  filter: invert(100%);
+}
+.dark-mode .nav {
+  background-color: #181c22;
+}
+.dark-mode .nav h2 {
+  color: #ff0000;
+}
+.dark-mode .nav__cart {
+  filter: invert(100%);
+}
+.dark-mode .nav .darkModeToggle .dark {
+  display: inline;
+  filter: invert(100%);
+}
+.dark-mode .nav .darkModeToggle .light {
+  display: none;
+}
+.dark-mode .nav .fooda .carousel-container .carousel .text {
+  color: white;
+}
+.dark-mode .item {
+  border-color: transparent;
+}
+.dark-mode .prev-button {
+  background-color: #393E46;
+  margin-left: 35px;
+  color: white;
+  transition: all 200ms linear;
+}
+.dark-mode .prev-button:hover {
+  background-color: #9ca3ad;
+}
+.dark-mode .next-button {
+  background-color: #393E46;
+  margin-right: 32px;
+  transition: all 200ms linear;
+  color: white;
+}
+.dark-mode .next-button:hover {
+  background-color: #9ca3ad;
+}
+.dark-mode .food__card {
+  background-color: #393E46;
+}
+.dark-mode .food__card:hover {
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 3px 8px;
+}
+.dark-mode .food__card__ing__ingredient {
+  background-color: #9ca3af;
+  color: #222831;
+}
+.dark-mode .food__card__ing__ingredient:hover {
+  background-color: #FF7F7F;
+  color: white;
 }
 
-body {
-  line-height: 1;
+main {
+  display: flex;
+  flex-direction: column;
+  transition: 120ms linear;
 }
 
-ol, ul {
-  list-style: none;
+.panier {
+  display: none;
+  color: transparent;
+  transition: all 180ms linear;
 }
 
-blockquote, q {
-  quotes: none;
+.carton {
+  display: flex;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 140px;
+  width: 55%;
+  height: 560px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+  filter: opacity(85%);
+  transition: all 180ms linear;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  flex-wrap: wrap;
 }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
+.carton .close {
+  position: absolute;
+  right: 0;
+  margin-right: 3%;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.carton .title {
+  margin-top: 20px;
+  width: 100%;
+  top: 0%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.carton .item {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body {
   background-color: rgb(255, 255, 255);
-  transition: background-color 0.5s ease;
-  overflow-x: hidden;
+  margin: 0;
+  transition: all 180ms linear;
   font-family: Arial, sans-serif;
   margin: 20px;
-}
-body .dark-mode {
-  background-color: rgb(46, 45, 45);
-  color: beige;
 }
 body h1 {
   font-family: "Dancing Script", cursive;
@@ -76,25 +158,24 @@ body h2 {
   margin-bottom: 15px;
 }
 
-form {
-  max-width: 600px;
-  margin: auto;
-  margin-top: 15px;
+/*form {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 15px;
 }
 
 label {
-  display: block;
-  margin-bottom: 8px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 input,
 select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-}
-
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}*/
 button {
   background-color: #747774;
   color: white;
@@ -103,52 +184,70 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-family: "Dancing Script", cursive;
+  transition: all 150ms linear;
 }
 button:hover {
   background-color: rgb(97, 27, 27);
+  color: white;
 }
 
 .carousel-container {
   position: relative;
-  max-width: 600px;
   margin: auto;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel {
+  margin-top: 60px;
   display: flex;
+  width: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .item {
+  margin-top: 100px;
+  cursor: pointer;
+  max-width: 400px;
+  width: 20%;
   min-width: 100%;
+  max-height: 300px;
   box-sizing: border-box;
-  padding: 20px;
   text-align: center;
-  border: 1px solid #380b0b;
 }
-.item .item img {
-  max-width: 100%;
-  height: auto;
+.item .img {
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15%;
+}
+.item .text {
+  font-family: "Dancing Script", cursive;
+  font-size: 200%;
+  color: rgb(97, 27, 27);
 }
 
 .prev-button,
 .next-button {
   position: absolute;
+  color: black;
   top: 50%;
   transform: translateY(-50%);
   padding: 10px;
   font-size: 16px;
   font-family: "Dancing Script", cursive;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
   opacity: 1;
 }
 
 .prev-button {
   left: 10px;
+  margin-left: 35px;
 }
 
 .next-button {
   right: 10px;
+  margin-right: 32px;
 }
 
 .food {
@@ -156,19 +255,32 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 200px;
+  margin-bottom: 150px;
+}
+@media (max-width: 475px) {
+  .food {
+    justify-content: center;
+    margin-top: 100px;
+  }
 }
 .food__card {
   display: flex;
-  width: 16rem;
-  height: 300px;
+  width: 18rem;
+  height: 340px;
   margin-bottom: 20px;
   flex-wrap: wrap;
-  transition: all 210ms linear;
+  transition: all 180ms linear;
   border-radius: 25px;
   vertical-align: text-top;
   align-items: flex-start;
   align-content: start;
   background-color: white;
+}
+@media (max-width: 475px) {
+  .food__card {
+    width: 23rem;
+    height: 400px;
+  }
 }
 .food__card:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -205,7 +317,7 @@ button:hover {
 .food__card__ing {
   display: flex;
   width: 100%;
-  height: 28px;
+  height: 30px;
   flex-wrap: wrap;
 }
 .food__card__ing__ingredient {
@@ -215,7 +327,7 @@ button:hover {
   padding-right: 4px;
   margin-bottom: 0;
   font-size: 11px;
-  height: 13px;
+  height: 14px;
   margin-left: 6px;
   margin-top: 6px;
   margin-bottom: 0%;
@@ -236,82 +348,80 @@ button:hover {
   margin-left: auto;
   margin-right: auto;
   align-self: end;
-  height: 25px;
-  margin-top: 25px;
+  height: 28px;
+  margin-top: 20px;
   align-items: center;
+  font-size: 18px;
+  font-family: "Kalnia", serif;
   background-color: lightgrey;
   color: black;
   transition: all 125ms linear;
   position: relative;
+  margin-bottom: 10px;
 }
 .food__card__cart:hover {
   background-color: #88AB8E;
   color: white;
 }
 
-#popup-overlay {
+.nav {
   position: fixed;
-  top: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: #F9F5F6;
   left: 0;
+  top: 0;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding-bottom: 10px;
+  transition: all 200ms linear;
+}
+.nav__cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+  position: absolute;
   right: 0;
-  bottom: 0;
-  background-color: grey;
-  z-index: 98;
+  margin-right: 85px;
+  margin-top: 5px;
+  background-color: transparent;
+}
+.nav__cart:hover {
+  background-color: transparent;
+}
+.nav__cart .cart {
+  width: 60px;
+  height: 60px;
+}
+.nav .darkModeToggle {
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin-top: 5px;
+}
+.nav .darkModeToggle .svg {
+  width: 60px;
+  height: 60px;
+}
+.nav .darkModeToggle .dark {
   display: none;
 }
-
-#popup-overlay.open {
-  display: block !important;
+.nav__title {
+  margin-bottom: 0;
 }
-
-.popup-content {
-  max-width: 600px;
-  width: 100%;
-  padding: 30px;
-  box-sizing: border-box;
-  background-color: white;
+.nav__titleb {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.popup-content p {
-  margin: 20px 0;
-}
-
-.popup-link {
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-.popup-exit {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.popup-content h3 {
-  font-family: "Dancing Script", cursive;
-  font-size: 100%;
-  text-align: center;
-  color: rgb(128, 7, 7);
-  margin-bottom: 15px;
-}
-
-.Sbutton {
-  width: 100%;
-  height: 60px;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: -200px;
+  bottom: 0;
+  margin-bottom: 7px;
 }/*# sourceMappingURL=style.css.map */

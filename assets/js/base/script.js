@@ -1,4 +1,4 @@
-
+/*
 function validateForm() {
     let customerName = document.getElementById('customerName').value;
     let customerAddress = document.getElementById('customerAddress').value;
@@ -10,7 +10,7 @@ function validateForm() {
     }
 
     return true;
-}
+}*/
 
 //
 
