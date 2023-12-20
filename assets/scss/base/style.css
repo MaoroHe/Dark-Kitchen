@@ -92,8 +92,19 @@ main {
   transition: 120ms linear;
 }
 
+.panier {
+  display: none;
+  color: transparent;
+  transition: all 180ms linear;
+}
+
 .carton {
+  display: flex;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
   align-self: center;
+  justify-content: center;
   justify-self: center;
   margin-top: 140px;
   width: 55%;
@@ -105,6 +116,7 @@ main {
   filter: opacity(85%);
   transition: all 180ms linear;
   box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  flex-wrap: wrap;
 }
 .carton .close {
   position: absolute;
@@ -112,6 +124,18 @@ main {
   margin-right: 3%;
   margin-top: 20px;
   cursor: pointer;
+}
+.carton .title {
+  margin-top: 20px;
+  width: 100%;
+  top: 0%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.carton .item {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body {
@@ -160,7 +184,7 @@ button:hover {
   width: 100%;
   transition: transform 0.5s ease-in-out;
 }
-@media (max-width: 475px) {
+@media (max-width: 620px) {
   .carousel-container .carousel {
     margin-top: 1px;
   }
@@ -181,7 +205,7 @@ button:hover {
   border-radius: 5%;
   max-width: 800px;
 }
-@media (max-width: 475px) {
+@media (max-width: 620px) {
   .carousel-container .img {
     border-radius: 50%;
   }
@@ -211,7 +235,7 @@ button:hover {
   background-color: rgb(97, 27, 27);
   color: white;
 }
-@media (max-width: 475px) {
+@media (max-width: 620px) {
   .carousel-container .prev-button,
   .carousel-container .next-button {
     margin-left: 10px;
@@ -237,7 +261,7 @@ button:hover {
   margin-top: 200px;
   margin-bottom: 150px;
 }
-@media (max-width: 475px) {
+@media (max-width: 620px) {
   .food {
     justify-content: center;
     margin-top: 100px;
@@ -256,7 +280,7 @@ button:hover {
   align-content: start;
   background-color: white;
 }
-@media (max-width: 475px) {
+@media (max-width: 620px) {
   .food__card {
     width: 23rem;
     height: 400px;
@@ -370,6 +394,12 @@ button:hover {
   margin-right: 85px;
   margin-top: 5px;
   background-color: transparent;
+}
+@media (max-width: 620px) {
+  .nav__cart {
+    left: 0;
+    margin-left: 25px;
+  }
 }
 .nav__cart:hover {
   background-color: transparent;
